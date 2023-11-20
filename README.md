@@ -38,10 +38,28 @@
 
 ### Banco de dados
 
-1. Altere as propriedades do arquivo:
+1. Altere as propriedades do arquivo `db/db.rb`, para que fique de acordo com o credenciamento do seu banco de dados:
 
-   ```sh
-   bundle exec xyz
+   ```
+   ActiveRecord::Base.establish_connection(
+    adapter: 'mysql2',
+    host: 'localhost',
+    username: 'user',
+    password: 'passw',
+    database: 'dbname'
+  )
    ```
 
-2. Preview your local
+2. Execute o script `setup.rb`. Ele irá criar as tabelas do banco de dados e preparar a estrutura necessária para armazenar os dados:
+
+   ```sh
+   ruby setup.rb
+   ```
+
+### Importação e Limpeza dos dados
+
+1. Execute o seguinte script:
+
+   ```sh
+   ruby import_and_clear.rb
+   ```
