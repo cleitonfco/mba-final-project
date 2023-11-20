@@ -47,7 +47,7 @@
     username: 'user',
     password: 'passw',
     database: 'dbname'
-  )
+   )
    ```
 
 2. Execute o script `setup.rb`. Ele irá criar as tabelas do banco de dados e preparar a estrutura necessária para armazenar os dados:
