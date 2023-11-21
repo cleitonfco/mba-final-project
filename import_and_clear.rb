@@ -3,7 +3,7 @@ require_relative './db/operation'
 require_relative './db/product'
 require_relative './db/result'
 
-data = CSV.parse(File.read("./bases/Dados 2022-2023.csv"), headers: true)
+data = CSV.parse(File.read("./bases/Dados 2023.csv"), headers: true)
 map_operations = {
   "Código Filial" => 'codigo_filial',
   "Sequência" => 'sequencia',
